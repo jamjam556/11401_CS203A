@@ -1,9 +1,9 @@
 # Assignment V: Tree Structures
 
-**Course:** Data Structures (CSE CS203A)  
-**Student:** [Your Name]  
-**Student ID:** [Your ID]  
-**Date:** 2025-12-30
+**Course:** Data Structures (11401_CS203A)  
+**Student:** [曾文羿ㄗ  
+**Student ID:** [1121428]  
+
 
 ## 📖 Project Overview
 This project is an exploration of various tree data structures, ranging from general trees to specialized self-balancing trees and heaps. The goal is to understand the hierarchy, constraints, and construction methods of each variant using a fixed set of integer data.
