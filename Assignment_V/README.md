@@ -1,7 +1,7 @@
 # Assignment V: Tree Structures
 
 **Course:** Data Structures (11401_CS203A)  
-**Student:** [曾文羿ㄗ  
+**Student:** [曾文羿]
 **Student ID:** [1121428]  
 
 
