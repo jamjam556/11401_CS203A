@@ -1,4 +1,4 @@
-# Section A understand and clearly define:
+# Section A. Understand and clearly define:
 
 **1. General Tree**  
 
@@ -60,3 +60,52 @@ graph TD
 | **BST** | **Red-Black Tree** | Color Rules & Balance |
 | **Binary Tree** | **Max Heap** | Heap Property: Parent >= Child |
 | **Binary Tree** | **Min Heap** | Heap Property: Parent <= Child |
+
+# Section C. Tree Constructions Using Given Integers
+
+**Given Integers:**
+`37, 142, 5, 89, 63, 117, 24, 176, 58, 133, 92, 11, 151, 72, 39, 184, 7, 101, 54, 160`
+
+---
+
+#### 1. Binary Tree
+* **Tool name / URL**: [e.g., treeconverter](https://treeconverter.com/)
+* **Construction description**: Inserted the integers in the given order. Since no specific balancing or sorting rule is required for a general binary tree, I placed nodes using a level-order strategy (filling top to bottom, left to right) to maintain a structural form similar to a complete binary tree.
+* **Screenshot**:
+    > ![Binary Tree Screenshot](<img width="1520" height="542" alt="image" src="https://github.com/user-attachments/assets/95ab5f06-3552-4e80-847c-047e43f52c1a" />)
+
+#### 2. Complete Binary Tree
+* **Tool name / URL**: [e.g., Draw.io or USFCA Tool]
+* **Construction description**: Constructed by filling nodes strictly from top to bottom and left to right. No gaps were left. The root is 37, the left child is 142, the right child is 5, and so on.
+* **Screenshot**:
+    > ![Complete Binary Tree Screenshot](place_your_image_link_here.png)
+
+#### 3. Binary Search Tree (BST)
+* **Tool name / URL**: [e.g., USFCA BST Visualizer]
+* **Construction description**: Inserted elements sequentially. For each value, I compared it with the root: smaller values went to the left subtree, and larger values went to the right subtree. No balancing operations were performed.
+* **Screenshot**:
+    > ![BST Screenshot](place_your_image_link_here.png)
+
+#### 4. AVL Tree
+* **Tool name / URL**: [e.g., USFCA AVL Tree Visualizer]
+* **Construction description**: Inserted elements sequentially. After every insertion, the tree checked the balance factor of each node. If any node's balance factor became other than -1, 0, or 1, appropriate rotations (LL, RR, LR, or RL) were performed to restore balance.
+* **Screenshot**:
+    > ![AVL Tree Screenshot](place_your_image_link_here.png)
+
+#### 5. Red-Black Tree
+* **Tool name / URL**: [e.g., USFCA Red-Black Tree Visualizer]
+* **Construction description**: Inserted elements using standard BST insertion, initially coloring new nodes red. Then, fixed any violations of Red-Black properties (such as double red nodes) using recoloring and rotations.
+* **Screenshot**:
+    > ![Red-Black Tree Screenshot](place_your_image_link_here.png)
+
+#### 6. Max Heap
+* **Tool name / URL**: [e.g., USFCA Heap Visualizer]
+* **Construction description**: Built using the insertion method. Each new element was added to the next available position in the complete binary tree structure and then "bubbled up" (swapped with its parent) until the heap property (Parent ≥ Child) was satisfied.
+* **Screenshot**:
+    > ![Max Heap Screenshot](place_your_image_link_here.png)
+
+#### 7. Min Heap
+* **Tool name / URL**: [e.g., USFCA Heap Visualizer]
+* **Construction description**: Similar to the Max Heap, but enforced the property that Parent ≤ Child. New elements were inserted at the end and bubbled up if they were smaller than their parent.
+* **Screenshot**:
+    > ![Min Heap Screenshot](place_your_image_link_here.png)
