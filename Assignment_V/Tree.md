@@ -70,42 +70,70 @@ graph TD
 
 #### 1. Binary Tree
 * **Tool name / URL**: [e.g., treeconverter](https://treeconverter.com/)
-* **Construction description**: Inserted the integers in the given order. Since no specific balancing or sorting rule is required for a general binary tree, I placed nodes using a level-order strategy (filling top to bottom, left to right) to maintain a structural form similar to a complete binary tree.
+* **Construction description**: Inserted integers in the given order.
 * **Screenshot**:
-    > ![Binary Tree Screenshot](<img width="1520" height="542" alt="image" src="https://github.com/user-attachments/assets/95ab5f06-3552-4e80-847c-047e43f52c1a" />)
+   >  ![Binary Tree Screenshot](https://github.com/user-attachments/assets/95ab5f06-3552-4e80-847c-047e43f52c1a)
 
 #### 2. Complete Binary Tree
-* **Tool name / URL**: [e.g., Draw.io or USFCA Tool]
-* **Construction description**: Constructed by filling nodes strictly from top to bottom and left to right. No gaps were left. The root is 37, the left child is 142, the right child is 5, and so on.
+* **Tool name / URL**: [e.g., treeconverter](https://treeconverter.com/)
+* **Construction description**: Constructed by filling nodes strictly from top to bottom and left to right. No gaps were left.
 * **Screenshot**:
-    > ![Complete Binary Tree Screenshot](place_your_image_link_here.png)
+   >  ![Complete Binary Tree Screenshot](https://github.com/user-attachments/assets/95ab5f06-3552-4e80-847c-047e43f52c1a)
 
 #### 3. Binary Search Tree (BST)
-* **Tool name / URL**: [e.g., USFCA BST Visualizer]
-* **Construction description**: Inserted elements sequentially. For each value, I compared it with the root: smaller values went to the left subtree, and larger values went to the right subtree. No balancing operations were performed.
+* **Tool name / URL**: [e.g., USFCA BST Visualizer](https://www.cs.usfca.edu/~galles/visualization/BST.html)
+* **Construction description**:  For each value, compared it with the root: smaller values went to the left subtree, and larger values went to the right subtree. No balancing operations were performed.
 * **Screenshot**:
-    > ![BST Screenshot](place_your_image_link_here.png)
+   >  ![BST Screenshot](<https://github.com/user-attachments/assets/ce89578f-618d-46de-9d1b-a01e2ee841a2>)
 
 #### 4. AVL Tree
-* **Tool name / URL**: [e.g., USFCA AVL Tree Visualizer]
-* **Construction description**: Inserted elements sequentially. After every insertion, the tree checked the balance factor of each node. If any node's balance factor became other than -1, 0, or 1, appropriate rotations (LL, RR, LR, or RL) were performed to restore balance.
+* **Tool name / URL**: [e.g., USFCA AVL Tree Visualizer](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)
+* **Construction description**: Inserted elements sequentially. After every insertion, the tree checked the balance factor of each node.
 * **Screenshot**:
-    > ![AVL Tree Screenshot](place_your_image_link_here.png)
+   >  ![AVL Tree Screenshot](https://github.com/user-attachments/assets/f8956413-85c9-4286-8ecc-3d4c5456d1bd/)
 
 #### 5. Red-Black Tree
-* **Tool name / URL**: [e.g., USFCA Red-Black Tree Visualizer]
+* **Tool name / URL**: [e.g., USFCA Red-Black Tree Visualizer](https://www.cs.usfca.edu/~galles/visualization/RedBlack.html)
 * **Construction description**: Inserted elements using standard BST insertion, initially coloring new nodes red. Then, fixed any violations of Red-Black properties (such as double red nodes) using recoloring and rotations.
 * **Screenshot**:
-    > ![Red-Black Tree Screenshot](place_your_image_link_here.png)
+  > ![Red-Black Tree Screenshot](https://github.com/user-attachments/assets/6a0f38c7-7400-43ae-b05a-077f112b203d)
 
 #### 6. Max Heap
-* **Tool name / URL**: [e.g., USFCA Heap Visualizer]
+* **Tool name / URL**: [e.g., Max Heap Simulator](https://sercankulcu.github.io/files/data_structures/slides/Bolum_08_Heap.html)
 * **Construction description**: Built using the insertion method. Each new element was added to the next available position in the complete binary tree structure and then "bubbled up" (swapped with its parent) until the heap property (Parent ≥ Child) was satisfied.
 * **Screenshot**:
-    > ![Max Heap Screenshot](place_your_image_link_here.png)
+  >  ![Max Heap Screenshot](https://github.com/user-attachments/assets/a253e096-9f82-4349-8a05-8670942ccbfb)
 
 #### 7. Min Heap
-* **Tool name / URL**: [e.g., USFCA Heap Visualizer]
+* **Tool name / URL**: [e.g., USFCA Heap Visualizer](https://www.cs.usfca.edu/~galles/visualization/Heap.html)
 * **Construction description**: Similar to the Max Heap, but enforced the property that Parent ≤ Child. New elements were inserted at the end and bubbled up if they were smaller than their parent.
 * **Screenshot**:
-    > ![Min Heap Screenshot](place_your_image_link_here.png)
+  >   ![Min Heap Screenshot](https://github.com/user-attachments/assets/6c8833bb-8e54-4f66-9af0-a9fac060c5d2)
+
+# Section D. Application Examples for Each Tree
+
+The following table lists a real-world or system-level application for each tree variant and explains why the structure is suitable.
+
+| Tree Type | Application Example | Why this tree fits (Properties that matter) |
+| :--- | :--- | :--- |
+| **Binary Tree** | **Expression Trees** | It naturally represents the structure of operators and operands (left and right). Evaluation can be easily performed via tree traversal. |
+| **Complete Binary Tree** | **Basis for Heap Data Structures** | Its compact structure allows it to be efficiently stored in an **array** without gaps, providing excellent space and access efficiency. |
+| **Binary Search Tree** | **Dynamic Data Search** (Dictionaries, Symbol Tables) | Its sorted property makes searching and updating efficient in average-case scenarios. |
+| **AVL Tree** | **Search-Intensive Systems** (Read-heavy databases) | It maintains strict height balance, guaranteeing stable $O(\log n)$ search performance even in worst-case scenarios. |
+| **Red-Black Tree** | **Standard Libraries** (e.g., C++ map/set) | Its balancing criteria are looser than AVL trees, resulting in lower costs (fewer rotations) for insertions and deletions. |
+| **Max Heap** | **Priority Queues** (Accessing Max Value) | The largest element is always located at the root, making it extremely fast to access the highest priority item. |
+| **Min Heap** | **Scheduling Systems / Shortest Path Algorithms** | It provides fast access to the minimum element ($O(1)$), which is ideal for weight-based comparisons or processing shortest tasks first. |
+
+---
+
+# Section E. AI Usage Log
+
+As required by the assignment policy, this table records the usage of AI tools for learning and organizing this report.
+
+| Index | AI Service | Your Full Prompt / Question |
+| :--- | :--- | :--- |
+| 1 | Gemini | Explain the definitions of General tree, Binary tree, and other variants. |
+| 2 | Gemini | Provide a hierarchy diagram showing the relationship between tree types. |
+| 3 | Gemini | What are the real-world applications for Red-Black trees and AVL trees? |
+| 4 | Gemini | Help me organize the structure of the assignment report in Markdown. |
+| 5 | Gemini | How to fix the image display issue in Markdown on GitHub? |
